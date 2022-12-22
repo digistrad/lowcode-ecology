@@ -1,6 +1,6 @@
 {
   "name": "@dslc/formily-materials",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "formily-materials",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -68,7 +68,7 @@
   },
   "componentConfig": {
     "isComponentLibrary": true,
-    "materialSchema": "https://unpkg.com/@dslc/formily-materials@1.0.7/build/lowcode/assets-prod.json"
+    "materialSchema": "https://unpkg.com/@dslc/formily-materials@1.0.8/build/lowcode/assets-prod.json"
   },
   "publishConfig": {
     "access": "public"
