@@ -9,7 +9,7 @@ const FormilyFormMeta = {
   group: 'Formily',
   category: '布局组件',
   npm: {
-    package: '@seada/formily-materials',
+    package: '@dslc/formily-materials',
     version: 'latest',
     exportName: 'FormilyForm',
     main: '',

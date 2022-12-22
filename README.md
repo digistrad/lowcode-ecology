@@ -30,16 +30,16 @@ yarn start
 {
   "packages": [
     {
-      "package": "@seada/antd-materials",
+      "package": "@dslc/antd-materials",
       "version": "0.1.1",
       "library": "SeadaAntdMaterials",
       "urls": [
-        "https://unpkg.com/@seada/antd-materials@latest/build/lowcode/view.js",
-        "https://unpkg.com/@seada/antd-materials@latest/build/lowcode/view.css"
+        "https://unpkg.com/@dslc/antd-materials@latest/build/lowcode/view.js",
+        "https://unpkg.com/@dslc/antd-materials@latest/build/lowcode/view.css"
       ],
       "editUrls": [
-        "https://unpkg.com/@seada/antd-materials@latest/build/lowcode/view.js",
-        "https://unpkg.com/@seada/antd-materials@latest/build/lowcode/view.css"
+        "https://unpkg.com/@dslc/antd-materials@latest/build/lowcode/view.js",
+        "https://unpkg.com/@dslc/antd-materials@latest/build/lowcode/view.css"
       ]
     }
   ],
@@ -47,12 +47,12 @@ yarn start
     {
       "exportName": "SeadaAntdMaterialsMeta",
       "npm": {
-        "package": "@seada/antd-materials",
+        "package": "@dslc/antd-materials",
         "version": "0.1.1"
       },
-      "url": "https://unpkg.com/@seada/antd-materials@latest/build/lowcode/meta.js",
+      "url": "https://unpkg.com/@dslc/antd-materials@latest/build/lowcode/meta.js",
       "urls": {
-        "default": "https://unpkg.com/@seada/antd-materials@latest/build/lowcode/meta.js"
+        "default": "https://unpkg.com/@dslc/antd-materials@latest/build/lowcode/meta.js"
       }
     }
   ]
@@ -69,13 +69,13 @@ yarn start
 // formily相关依赖
 npm install @formily/core @formily/react antd moment @formily/antd
 // plugin
-npm install @seada/antd-plugins
+npm install @dslc/antd-plugins
 ```
 
 使用插件
 
 ```javascript
-import { PluginFormily } from '@seada/antd-plugins'
+import { PluginFormily } from '@dslc/antd-plugins'
 import { plugins } from '@alilc/lowcode-engine'
 
 async function registerFormilyPlugins() {
@@ -91,16 +91,16 @@ registerFormilyPlugins()
 {
   "packages": [
     {
-      "package": "@seada/formily-materials",
+      "package": "@dslc/formily-materials",
       "version": "0.1.1",
       "library": "SeadaFormilyMaterials",
       "urls": [
-        "https://unpkg.com/@seada/formily-materials@latest/build/lowcode/view.js",
-        "https://unpkg.com/@seada/formily-materials@latest/build/lowcode/view.css"
+        "https://unpkg.com/@dslc/formily-materials@latest/build/lowcode/view.js",
+        "https://unpkg.com/@dslc/formily-materials@latest/build/lowcode/view.css"
       ],
       "editUrls": [
-        "https://unpkg.com/@seada/formily-materials@latest/build/lowcode/view.js",
-        "https://unpkg.com/@seada/formily-materials@latest/build/lowcode/view.css"
+        "https://unpkg.com/@dslc/formily-materials@latest/build/lowcode/view.js",
+        "https://unpkg.com/@dslc/formily-materials@latest/build/lowcode/view.css"
       ]
     }
   ],
@@ -108,12 +108,12 @@ registerFormilyPlugins()
     {
       "exportName": "SeadaFormilyMaterialsMeta",
       "npm": {
-        "package": "@seada/formily-materials",
+        "package": "@dslc/formily-materials",
         "version": "0.1.1"
       },
-      "url": "https://unpkg.com/@seada/formily-materials@latest/build/lowcode/meta.js",
+      "url": "https://unpkg.com/@dslc/formily-materials@latest/build/lowcode/meta.js",
       "urls": {
-        "default": "https://unpkg.com/@seada/formily-materials@latest/build/lowcode/meta.js"
+        "default": "https://unpkg.com/@dslc/formily-materials@latest/build/lowcode/meta.js"
       }
     }
   ]

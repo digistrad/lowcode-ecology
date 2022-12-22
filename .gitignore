@@ -4,7 +4,6 @@ dist
 lib
 esm
 es
-package-lock.json
 .tmp
 build
 .DS_Store

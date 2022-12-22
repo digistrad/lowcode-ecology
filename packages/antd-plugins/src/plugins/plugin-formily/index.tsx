@@ -1,5 +1,5 @@
 import { ILowCodePluginContext } from '@alilc/lowcode-engine'
-import { FormilySchemaSetter } from '@seada/antd-setters'
+import { FormilySchemaSetter } from '@dslc/antd-setters'
 
 const LowcodePluginFormily = (ctx: ILowCodePluginContext) => {
   return {

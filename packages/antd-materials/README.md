@@ -19,11 +19,11 @@ XSwitch 代理如下
 {
   "proxy": [
     [
-      "https://unpkg.com/@seada/antd-materials@latest/build/lowcode/view.js",
+      "https://unpkg.com/@dslc/antd-materials@latest/build/lowcode/view.js",
       "http://localhost:5551/view.js"
     ],
     [
-      "https://unpkg.com/@seada/antd-materials@latest/build/lowcode/meta.js",
+      "https://unpkg.com/@dslc/antd-materials@latest/build/lowcode/meta.js",
       "http://localhost:5551/meta.js"
     ]
   ]

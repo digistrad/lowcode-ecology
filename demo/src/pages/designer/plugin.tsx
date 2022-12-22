@@ -18,7 +18,7 @@ import {
   PluginSave,
   PluginSimulatorResizer,
   PluginUndoRedo
-} from '@seada/antd-plugins'
+} from '@dslc/antd-plugins'
 import {
   BoolSetter,
   NumberSetter,
@@ -27,7 +27,7 @@ import {
   SlotSetter,
   StringSetter,
   TextAreaSetter
-} from '@seada/antd-setters'
+} from '@dslc/antd-setters'
 import assets from '../../assets/assets.json'
 import { getPageSchema, saveSchema } from './helper'
 import CodeEditor from '@alilc/lowcode-plugin-code-editor'

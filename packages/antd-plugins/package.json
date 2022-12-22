@@ -1,6 +1,6 @@
 {
-  "name": "@seada/antd-plugins",
-  "version": "1.0.0-rc.23",
+  "name": "@dslc/antd-plugins",
+  "version": "1.0.8",
   "description": "",
   "main": "lib/index.js",
   "module": "esm/index.js",
@@ -15,11 +15,11 @@
   "devDependencies": {
     "@alilc/lowcode-engine": "^1.0.9",
     "@alilc/lowcode-types": "^1.0.10",
-    "@seada/lowcode-code-generator": "^1.0.1-beta.1"
+    "@dslc/lowcode-code-generator": "^1.0.5"
   },
   "dependencies": {
-    "@seada/antd-setters": "1.0.0-rc.23",
-    "@seada/lowcode-code-generator": "^1.0.4",
+    "@dslc/antd-setters": "1.0.8",
+    "@dslc/lowcode-code-generator": "^1.0.5",
     "ahooks": "^3.7.0",
     "string-natural-compare": "^3.0.1"
   },

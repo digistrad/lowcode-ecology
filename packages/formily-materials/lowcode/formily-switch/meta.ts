@@ -8,7 +8,7 @@ const FormilyComponentMeta = {
   group: 'Formily',
   category: '输入组件',
   npm: {
-    package: '@seada/formily-materials',
+    package: '@dslc/formily-materials',
     version: 'latest',
     exportName: 'FormilySwitch',
     main: '',

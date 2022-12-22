@@ -6,7 +6,9 @@ import { observer, VoidField } from '@formily/react';
 import { IFormItemProps, uuid } from '../../shared';
 import cls from 'classnames';
 
-const DroppableWidget = () => <div className="lc-container-placeholder">拖拽组件或模板到这里</div>;
+const DroppableWidget = () => (
+  <div className="lc-container-placeholder">Drag and drop components or templates here</div>
+);
 
 // todo: arrayCards 相关操作可以进行配置， 这里偷个懒直接默认都要
 export const ArrayCardsPreview: React.FC<IFormItemProps> = observer((props) => {

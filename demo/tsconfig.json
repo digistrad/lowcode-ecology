@@ -12,7 +12,7 @@
     "paths": {
       "@/*": ["*"],
       "@@/*": [".umi/*"],
-      "@seada/*": ["../packages/*/src"]
+      "@dslc/*": ["../packages/*/src"]
     },
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true

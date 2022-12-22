@@ -8,7 +8,7 @@ const FormilyComponentMeta = {
   group: 'Formily',
   category: '自增组件',
   npm: {
-    package: '@seada/formily-materials',
+    package: '@dslc/formily-materials',
     version: 'latest',
     exportName: 'FormilyArrayTabs',
     main: '',
