@@ -3,12 +3,12 @@ import { uuid } from '../utils'
 
 const ProTableMeta = {
   componentName: 'ProTable',
-  title: '高级表格',
+  title: 'Advanced Form',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
-  group: '高级组件',
-  category: '表格类',
+  group: 'Advanced',
+  category: 'Form',
   npm: {
     package: '@dslc/antd-materials',
     version: 'latest',
@@ -23,7 +23,7 @@ const ProTableMeta = {
         name: 'ref',
         title: {
           label: 'ref',
-          tip: "ref | 通过 this.$('xxx') 获取到组件实例"
+          tip: "ref | Get the component instance through this.$('xxx')"
         },
         defaultValue: () => {
           return `pro_table_${uuid()}`
@@ -31,7 +31,7 @@ const ProTableMeta = {
         setter: 'StringSetter'
       },
       {
-        title: '数据源',
+        title: 'Data source',
         display: 'block',
         type: 'group',
         items: [
@@ -48,10 +48,10 @@ const ProTableMeta = {
                 'en-US': 'request',
                 'zh-CN': '请求函数'
               },
-              tip: 'request | 获得 dataSource 的方法'
+              tip: 'request | method to get dataSource'
             },
             name: 'request',
-            description: '请求函数',
+            description: 'request function',
             setter: {
               componentName: 'FunctionSetter',
               isRequired: false
@@ -64,10 +64,10 @@ const ProTableMeta = {
                 'en-US': 'manualRequest',
                 'zh-CN': '手动请求'
               },
-              tip: 'manualRequest | 是否手动触发请求'
+              tip: 'manualRequest'
             },
             name: 'manualRequest',
-            description: '是否手动触发请求',
+            description: 'Whether to trigger the request manually',
             setter: {
               componentName: 'BoolSetter',
               isRequired: false,
@@ -76,15 +76,15 @@ const ProTableMeta = {
           },
           {
             name: 'loading',
-            title: { label: '加载中', tip: 'loading | 是否加载中' },
+            title: { label: 'Loading', tip: 'loading' },
             propType: 'bool',
             setter: 'BoolSetter'
           },
           {
             name: 'cardBordered',
             title: {
-              label: '边框',
-              tip: 'cardBordered | Table 和 Search 外围 Card 组件的边框'
+              label: 'border',
+              tip: 'cardBordered | Borders for Table and Search surrounding Card components'
             },
             propType: 'bool',
             setter: 'BoolSetter'
@@ -92,8 +92,8 @@ const ProTableMeta = {
           {
             name: 'rowKey',
             title: {
-              label: '行Key',
-              tip: 'rowKey | 表格行 key 的取值，可以是字符串或一个函数'
+              label: 'row key',
+              tip: 'rowKey | The value of the table row key, which can be a string or a function'
             },
             propType: { type: 'oneOfType', value: ['string', 'func'] },
             setter: [
@@ -102,7 +102,7 @@ const ProTableMeta = {
                 componentName: 'FunctionSetter',
                 props: {
                   template:
-                    'getRowKey(record,index,${extParams}){\n// 通过函数获取表格行 key\nreturn record.id;\n}'
+                    'getRowKey(record,index,${extParams}){\n//Get table row key through function\nreturn record.id;\n}'
                 }
               },
               'VariableSetter'
@@ -113,7 +113,10 @@ const ProTableMeta = {
       },
       {
         name: 'columns',
-        title: { label: '表格列', tip: '表格列的配置描述，具体项见下表' },
+        title: {
+          label: 'columns',
+          tip: 'The configuration description of the table columns, see the table below for specific items'
+        },
         setter: {
           componentName: 'ArraySetter',
           props: {
@@ -124,7 +127,7 @@ const ProTableMeta = {
                   items: [
                     {
                       name: 'title',
-                      title: { label: '列标题', tip: 'title | 列标题' },
+                      title: { label: 'title', tip: 'title' },
                       propType: {
                         type: 'oneOfType',
                         value: ['string', 'func']
@@ -133,7 +136,7 @@ const ProTableMeta = {
                         'StringSetter',
                         {
                           componentName: 'SlotSetter',
-                          title: '列标题插槽',
+                          title: 'column header slot',
                           initialValue: {
                             type: 'JSSlot',
                             params: ['options'],
@@ -145,61 +148,61 @@ const ProTableMeta = {
                     },
                     {
                       name: 'dataIndex',
-                      title: { label: '数据字段', tip: 'dataIndex | 数据字段' },
+                      title: { label: 'dataIndex', tip: 'dataIndex' },
                       propType: 'string',
                       setter: 'StringSetter',
                       isRequired: true
                     },
                     {
                       name: 'valueType',
-                      title: { label: '数据类型', tip: 'valueType | 数据类型' },
+                      title: { label: 'valueType', tip: 'valueType' },
                       propType: 'string',
                       setter: {
                         componentName: 'SelectSetter',
                         props: {
                           options: [
                             {
-                              title: '操作',
+                              title: 'option',
                               value: 'option'
                             },
                             {
-                              title: '文本',
+                              title: 'text',
                               value: 'text'
                             },
                             {
-                              title: '标签',
+                              title: 'tag',
                               value: 'tag'
                             },
                             {
-                              title: '数字',
+                              title: 'digit',
                               value: 'digit'
                             },
                             {
-                              title: '密码输入框',
+                              title: 'password',
                               value: 'password'
                             },
                             {
-                              title: '金额',
+                              title: 'money',
                               value: 'money'
                             },
                             {
-                              title: '日期',
+                              title: 'date',
                               value: 'date'
                             },
                             {
-                              title: '日期时间',
+                              title: 'dateTime',
                               value: 'dateTime'
                             },
                             {
-                              title: '日期区间',
+                              title: 'dateRange',
                               value: 'dateRange'
                             },
                             {
-                              title: '日期时间区间',
+                              title: 'dateTimeRange',
                               value: 'dateTimeRange'
                             },
                             {
-                              title: '链接',
+                              title: 'link',
                               value: 'link'
                             },
                             // {
@@ -207,47 +210,47 @@ const ProTableMeta = {
                             //   value: 'tag',
                             // },
                             {
-                              title: '头像',
+                              title: 'avatar',
                               value: 'avatar'
                             },
                             {
-                              title: '开关',
+                              title: 'switch',
                               value: 'switch'
                             },
                             {
-                              title: '百分比',
+                              title: 'percent',
                               value: 'percent'
                             },
                             {
-                              title: '进度条',
+                              title: 'progress',
                               value: 'progress'
                             },
                             {
-                              title: '下拉框',
+                              title: 'select',
                               value: 'select'
                             },
                             {
-                              title: '单选框',
+                              title: 'radio',
                               value: 'radio'
                             },
                             {
-                              title: '多选框',
+                              title: 'checkbox',
                               value: 'checkbox'
                             },
                             {
-                              title: '图片',
+                              title: 'image',
                               value: 'image'
                             },
                             {
-                              title: 'JSON代码框',
+                              title: 'jsonCode',
                               value: 'jsonCode'
                             },
                             {
-                              title: '代码框',
+                              title: 'code',
                               value: 'code'
                             },
                             {
-                              title: '颜色选择器',
+                              title: 'color',
                               value: 'color'
                             }
                           ]
@@ -257,8 +260,8 @@ const ProTableMeta = {
                     {
                       name: 'renderTag',
                       title: {
-                        label: '使用 Tag 渲染',
-                        tip: 'renderTag | 是否使用 Tag 渲染'
+                        label: 'renderTag',
+                        tip: 'renderTag | Whether to use Tag rendering'
                       },
                       propType: 'bool',
                       setter: 'BoolSetter'
@@ -266,8 +269,8 @@ const ProTableMeta = {
                     {
                       name: 'valueEnum',
                       title: {
-                        label: '枚举定义',
-                        tip: 'valueEnum | 值的枚举，会自动转化把值当成 key 来取出要显示的内容'
+                        label: 'valueEnum',
+                        tip: 'valueEnum | The enumeration of values ​​will be automatically converted and the value will be used as a key to retrieve the content to be displayed'
                       },
                       propType: 'object',
                       setter: 'JsonSetter'
@@ -279,10 +282,10 @@ const ProTableMeta = {
                           'en-US': 'request',
                           'zh-CN': '远程获取枚举'
                         },
-                        tip: 'request | 远程获取枚举'
+                        tip: 'request'
                       },
                       name: 'request',
-                      description: '远程获取枚举',
+                      description: 'request',
                       setter: {
                         componentName: 'FunctionSetter',
                         isRequired: false
@@ -290,7 +293,7 @@ const ProTableMeta = {
                     },
                     {
                       name: 'width',
-                      title: { label: '宽度', tip: 'width | 宽度' },
+                      title: { label: 'width', tip: 'width' },
                       propType: {
                         type: 'oneOfType',
                         value: ['number', 'string']
@@ -300,8 +303,8 @@ const ProTableMeta = {
                     {
                       name: 'tooltip',
                       title: {
-                        label: '气泡提示',
-                        tip: 'tooltip	| 气泡提示'
+                        label: 'tooltip',
+                        tip: 'tooltip'
                       },
                       propType: 'string',
                       setter: 'StringSetter'
@@ -309,8 +312,8 @@ const ProTableMeta = {
                     {
                       name: 'ellipsis',
                       title: {
-                        label: '是否自动缩略',
-                        tip: 'ellipsis | 是否自动缩略'
+                        label: 'ellipsis',
+                        tip: 'ellipsis | Whether to automatically shorten'
                       },
                       propType: 'bool',
                       setter: 'BoolSetter'
@@ -318,8 +321,8 @@ const ProTableMeta = {
                     {
                       name: 'copyable',
                       title: {
-                        label: '是否可复制',
-                        tip: 'copyable | 是否可复制'
+                        label: 'copyable',
+                        tip: 'copyable'
                       },
                       propType: 'bool',
                       setter: 'BoolSetter'
@@ -351,7 +354,7 @@ const ProTableMeta = {
                     // },
                     {
                       name: 'align',
-                      title: { label: '对齐方式', tip: 'align | 对齐方式' },
+                      title: { label: 'align', tip: 'align' },
                       propType: {
                         type: 'oneOf',
                         value: ['left', 'right', 'center']
@@ -382,9 +385,9 @@ const ProTableMeta = {
                     },
                     {
                       name: 'fixed',
-                      title: { label: '列是否固定', tip: 'fixed | 列是否固定' },
+                      title: { label: 'fixed', tip: 'fixed' },
                       description:
-                        '（IE 下无效）列是否固定，可选 true (等效于 left) left right',
+                        '(Invalid under IE) Whether the column is fixed, optional true (equivalent to left) left right',
                       defaultValue: '',
                       propType: {
                         type: 'oneOf',
@@ -396,15 +399,15 @@ const ProTableMeta = {
                           props: {
                             options: [
                               {
-                                title: '不固定',
+                                title: 'not fixed',
                                 value: ''
                               },
                               {
-                                title: '固定在左侧',
+                                title: 'fixed on the left',
                                 value: 'left'
                               },
                               {
-                                title: '固定在右侧',
+                                title: 'fixed to the right',
                                 value: 'right'
                               }
                             ]
@@ -416,8 +419,8 @@ const ProTableMeta = {
                     {
                       name: 'className',
                       title: {
-                        label: '列样式类名',
-                        tip: 'className | 列样式类名'
+                        label: 'className',
+                        tip: 'className'
                       },
                       propType: 'string',
                       setter: 'StringSetter'
@@ -425,8 +428,8 @@ const ProTableMeta = {
                     {
                       name: 'sorter',
                       title: {
-                        label: '排序规则',
-                        tip: 'sorter | 排序函数，本地排序使用一个函数，需要服务端排序可设为 true'
+                        label: 'sorter',
+                        tip: 'sorter | Sorting function, local sorting uses a function, which needs to be set to true for server-side sorting'
                       },
                       propType: { type: 'oneOfType', value: ['bool', 'func'] },
                       setter: ['BoolSetter', 'FunctionSetter', 'VariableSetter']
@@ -435,7 +438,7 @@ const ProTableMeta = {
                       name: 'key',
                       title: {
                         label: 'React key',
-                        tip: 'key | React需要的key'
+                        tip: 'key | The key required by React'
                       },
                       propType: 'string',
                       setter: 'StringSetter'
@@ -443,8 +446,8 @@ const ProTableMeta = {
                     {
                       name: 'order',
                       title: {
-                        label: '排序',
-                        tip: 'order | 查询表单中的权重，权重大排序靠前'
+                        label: 'order',
+                        tip: 'order | Query the weights in the form, and the weights are sorted first'
                       },
                       propType: 'number',
                       setter: 'NumberSetter'
@@ -452,8 +455,8 @@ const ProTableMeta = {
                     {
                       name: 'hideInSearch',
                       title: {
-                        label: '隐藏搜索列',
-                        tip: 'hideInSearch | 在查询表单中不展示此项'
+                        label: 'hideInSearch',
+                        tip: 'hideInSearch | Do not show this item in the inquiry form'
                       },
                       propType: 'bool',
                       setter: 'BoolSetter'
@@ -461,8 +464,8 @@ const ProTableMeta = {
                     {
                       name: 'hideInTable',
                       title: {
-                        label: '隐藏列',
-                        tip: 'hideInTable | 在 Table 中不展示此列'
+                        label: 'hideInTable',
+                        tip: 'hideInTable | Dont show this column in Table'
                       },
                       propType: 'bool',
                       setter: 'BoolSetter'
@@ -470,8 +473,8 @@ const ProTableMeta = {
                     {
                       name: 'filters',
                       title: {
-                        label: '筛选菜单项',
-                        tip: 'filters | 表头的筛选菜单项'
+                        label: 'filters',
+                        tip: 'filters | Filter menu items in header'
                       },
                       propType: 'object',
                       setter: 'JsonSetter'
@@ -479,8 +482,8 @@ const ProTableMeta = {
                     {
                       name: 'fieldProps.showSearch',
                       title: {
-                        label: '下拉框支持搜索',
-                        tip: 'fieldProps.showSearch | 下拉框支持搜索'
+                        label: 'fieldProps.showSearch',
+                        tip: 'fieldProps.showSearch | The drop-down box supports search'
                       },
                       propType: 'bool',
                       setter: 'BoolSetter'
@@ -488,14 +491,14 @@ const ProTableMeta = {
                     {
                       name: 'render',
                       title: {
-                        label: '自定义渲染',
-                        tip: 'render | 插槽内的物料表达式可通过this.record获取当前行数据，this.index获取索引'
+                        label: 'render',
+                        tip: 'render | The material expression in the slot can get the current row data through this.record, and this.index gets the index'
                       },
                       propType: 'func',
                       setter: [
                         {
                           componentName: 'SlotSetter',
-                          title: '单元格插槽',
+                          title: 'cell slot',
                           initialValue: {
                             type: 'JSSlot',
                             params: ['text', 'record', 'index'],
@@ -514,7 +517,7 @@ const ProTableMeta = {
         }
       },
       {
-        title: '外观',
+        title: 'Exterior',
         display: 'block',
         type: 'group',
         items: [
@@ -534,7 +537,7 @@ const ProTableMeta = {
           },
           {
             name: 'showHeader',
-            title: { label: '显示表头', tip: 'showHeader | 是否显示表头' },
+            title: { label: 'showHeader', tip: 'showHeader' },
             propType: 'bool',
             setter: 'BoolSetter',
             defaultValue: true
@@ -542,15 +545,15 @@ const ProTableMeta = {
           {
             name: 'bordered',
             title: {
-              label: '显示边框',
-              tip: 'bordered | 是否展示外边框和列边框'
+              label: 'bordered',
+              tip: 'bordered | Whether to show outer and column borders'
             },
             propType: 'bool',
             setter: 'BoolSetter'
           },
           {
             name: 'size',
-            title: { label: '表格大小', tip: 'size | 表格大小' },
+            title: { label: 'size', tip: 'size' },
             propType: {
               type: 'oneOf',
               value: ['default', 'middle', 'small']
@@ -561,15 +564,15 @@ const ProTableMeta = {
                 props: {
                   options: [
                     {
-                      title: '默认',
+                      title: 'default',
                       value: 'default'
                     },
                     {
-                      title: '中',
+                      title: 'middle',
                       value: 'middle'
                     },
                     {
-                      title: '小',
+                      title: 'small',
                       value: 'small'
                     }
                   ]
@@ -581,7 +584,7 @@ const ProTableMeta = {
           },
           {
             name: 'tableLayout',
-            title: { label: '表格布局', tip: 'tableLayout | 表格布局' },
+            title: { label: 'tableLayout', tip: 'tableLayout' },
             defaultValue: '',
             propType: {
               type: 'oneOf',
@@ -593,15 +596,15 @@ const ProTableMeta = {
                 props: {
                   options: [
                     {
-                      title: '默认',
+                      title: 'default',
                       value: ''
                     },
                     {
-                      title: '自动',
+                      title: 'auto',
                       value: 'auto'
                     },
                     {
-                      title: '固定',
+                      title: 'fixed',
                       value: 'fixed'
                     }
                   ]
@@ -613,13 +616,13 @@ const ProTableMeta = {
         ]
       },
       {
-        title: '分页',
+        title: 'Pagination',
         display: 'block',
         type: 'group',
         items: [
           {
             name: 'pagination',
-            title: { label: '显示分页', tip: 'pagination | 显示分页' },
+            title: { label: 'pagination', tip: 'pagination' },
             propType: 'bool',
             setter: 'BoolSetter',
             extraProps: {
@@ -634,7 +637,7 @@ const ProTableMeta = {
           },
           {
             name: 'pagination.pageSize',
-            title: { label: '每页条数', tip: 'pagination.pageSize | 每页条数' },
+            title: { label: 'pageSize', tip: 'pagination.pageSize' },
             propType: 'number',
             setter: 'NumberSetter',
             condition: {
@@ -655,8 +658,8 @@ const ProTableMeta = {
           {
             name: 'pagination.defaultCurrent',
             title: {
-              label: '默认当前页',
-              tip: 'pagination.defaultCurrent | 默认的当前页数'
+              label: 'defaultCurrentPage',
+              tip: 'pagination.defaultCurrent'
             },
             propType: 'number',
             setter: 'NumberSetter',
@@ -700,8 +703,8 @@ const ProTableMeta = {
           {
             name: 'pagination.showSizeChanger',
             title: {
-              label: '页数切换',
-              tip: 'pagination.showSizeChanger | 是否展示 pageSize 切换器'
+              label: 'showSizeChanger',
+              tip: 'pagination.showSizeChanger | Whether to show the pageSize switcher'
             },
             propType: 'bool',
             setter: 'BoolSetter',
@@ -714,8 +717,8 @@ const ProTableMeta = {
           {
             name: 'pagination.showQuickJumper',
             title: {
-              label: '快速跳转',
-              tip: 'pagination.showQuickJumper | 是否可以快速跳转至某页'
+              label: 'showQuickJumper',
+              tip: 'pagination.showQuickJumper'
             },
             propType: 'bool',
             setter: 'BoolSetter',
@@ -727,7 +730,7 @@ const ProTableMeta = {
           },
           {
             name: 'pagination.simple',
-            title: { label: '简单分页', tip: 'pagination.simple | 简单分页' },
+            title: { label: 'simple pagination', tip: 'pagination.simple' },
             propType: 'bool',
             setter: 'BoolSetter',
             defaultValue: false,
@@ -738,7 +741,7 @@ const ProTableMeta = {
           },
           {
             name: 'pagination.size',
-            title: { label: '分页尺寸', tip: 'pagination.size | 分页尺寸' },
+            title: { label: 'pageSize', tip: 'pagination.size' },
             propType: {
               type: 'oneOf',
               value: ['default', 'small']
@@ -749,11 +752,11 @@ const ProTableMeta = {
                 props: {
                   options: [
                     {
-                      title: '默认',
+                      title: 'default',
                       value: 'default'
                     },
                     {
-                      title: '小',
+                      title: 'small',
                       value: 'small'
                     }
                   ]
@@ -769,7 +772,7 @@ const ProTableMeta = {
           },
           {
             name: 'pagination.position',
-            title: { label: '分页位置', tip: 'pagination.position | 分页位置' },
+            title: { label: 'position', tip: 'pagination.position' },
             setter: {
               componentName: 'ArraySetter',
               props: {
@@ -778,27 +781,27 @@ const ProTableMeta = {
                   props: {
                     options: [
                       {
-                        title: '上左',
+                        title: 'topLeft',
                         value: 'topLeft'
                       },
                       {
-                        title: '上中',
+                        title: 'topCenter',
                         value: 'topCenter'
                       },
                       {
-                        title: '上右',
+                        title: 'topRight',
                         value: 'topRight'
                       },
                       {
-                        title: '下左',
+                        title: 'bottomLeft',
                         value: 'bottomLeft'
                       },
                       {
-                        title: '下中',
+                        title: 'bottomCenter',
                         value: 'bottomCenter'
                       },
                       {
-                        title: '下右',
+                        title: 'bottomRight',
                         value: 'bottomRight'
                       }
                     ]
@@ -815,15 +818,15 @@ const ProTableMeta = {
         ]
       },
       {
-        title: '滚动',
+        title: 'Scroll',
         display: 'block',
         type: 'group',
         items: [
           {
             name: 'scroll.scrollToFirstRowOnChange',
             title: {
-              label: '自动滚动',
-              tip: 'scroll.scrollToFirstRowOnChange | 是否自动滚动到表格顶部'
+              label: 'scrollToFirstRowOnChange',
+              tip: 'scroll.scrollToFirstRowOnChange'
             },
             propType: 'bool',
             setter: 'BoolSetter',
@@ -832,8 +835,8 @@ const ProTableMeta = {
           {
             name: 'scroll.x',
             title: {
-              label: '横向滚动',
-              tip: 'scroll.x | 	设置横向滚动，也可用于指定滚动区域的宽，可以设置为像素值，百分比，true 和 max-content'
+              label: 'scroll.x',
+              tip: 'scroll.x | 	Set horizontal scrolling, it can also be used to specify the width of the scrolling area, which can be set as pixel value, percentage, true and max-content'
             },
             propType: { type: 'oneOfType', value: ['number', 'bool'] },
             setter: ['NumberSetter', 'BoolSetter', 'VariableSetter']
@@ -841,8 +844,8 @@ const ProTableMeta = {
           {
             name: 'scroll.y',
             title: {
-              label: '纵向滚动',
-              tip: 'scroll.y | 	设置纵向滚动，也可用于指定滚动区域的高，可以设置为像素值'
+              label: 'scroll.y',
+              tip: 'scroll.y | 	Set the vertical scrolling, and can also be used to specify the height of the scrolling area, which can be set as a pixel value'
             },
             propType: 'number',
             setter: ['NumberSetter', 'VariableSetter']
@@ -850,13 +853,13 @@ const ProTableMeta = {
         ]
       },
       {
-        title: '行选择器',
+        title: 'Row Selection',
         display: 'block',
         type: 'group',
         items: [
           {
             name: 'rowSelection',
-            title: { label: '行选择', tip: 'rowSelection | 行选择' },
+            title: { label: 'rowSelection', tip: 'rowSelection' },
             propType: 'bool',
             setter: 'BoolSetter',
             defaultValue: false,
@@ -873,8 +876,8 @@ const ProTableMeta = {
           {
             name: 'rowSelection.type',
             title: {
-              label: '行选择类型',
-              tip: 'rowSelection.type | 多选/单选'
+              label: 'type',
+              tip: 'rowSelection.type | multiple choice/single choice'
             },
             propType: {
               type: 'oneOf',
@@ -886,11 +889,11 @@ const ProTableMeta = {
                 props: {
                   options: [
                     {
-                      title: '多选',
+                      title: 'checkbox',
                       value: 'checkbox'
                     },
                     {
-                      title: '单选',
+                      title: 'radio',
                       value: 'radio'
                     }
                   ]
@@ -907,8 +910,8 @@ const ProTableMeta = {
           {
             name: 'rowSelection.preserveSelectedRowKeys',
             title: {
-              label: '缓存选项',
-              tip: 'rowSelection.preserveSelectedRowKeys | 当数据被删除时仍然保留选项'
+              label: 'preserveSelectedRowKeys',
+              tip: 'rowSelection.preserveSelectedRowKeys | Retain option when data is deleted'
             },
             propType: 'bool',
             setter: 'BoolSetter',
@@ -921,8 +924,8 @@ const ProTableMeta = {
           {
             name: 'rowSelection.fixed',
             title: {
-              label: '固定左边',
-              tip: 'rowSelection.fixed | 把选择框列固定在左边'
+              label: 'fixedLeft',
+              tip: 'rowSelection.fixed | Pin the select box column to the left'
             },
             propType: 'bool',
             setter: 'BoolSetter',
@@ -935,8 +938,8 @@ const ProTableMeta = {
           {
             name: 'rowSelection.selectedRowKeys',
             title: {
-              label: '选中行Key',
-              tip: 'rowSelection.selectedRowKeys | 指定选中项的 key 数组'
+              label: 'selectedRowKeys',
+              tip: 'rowSelection.selectedRowKeys | An array of keys specifying the selected item'
             },
             propType: 'object',
             setter: 'JsonSetter',
@@ -949,8 +952,8 @@ const ProTableMeta = {
           {
             name: 'rowSelection.getCheckboxProps',
             title: {
-              label: '默认属性',
-              tip: 'rowSelection.getCheckboxProps | 选择框的默认属性配置'
+              label: 'getCheckboxProps',
+              tip: 'rowSelection.getCheckboxProps | The default attribute configuration of the selection box'
             },
             propType: 'func',
             setter: [
@@ -958,7 +961,7 @@ const ProTableMeta = {
                 componentName: 'FunctionSetter',
                 props: {
                   template:
-                    'getCheckboxProps(record,${extParams}){\n// 选择框的默认属性配置\nreturn { disabled: false };\n}'
+                    'getCheckboxProps(record,${extParams}){\n//The default property configuration of the checkbox\nreturn { disabled: false };\n}'
                 }
               },
               'VariableSetter'
@@ -973,7 +976,7 @@ const ProTableMeta = {
             name: 'rowSelection.onChange',
             title: {
               label: 'onChange',
-              tip: 'rowSelection.onChange | 选中项发生变化时的回调'
+              tip: 'rowSelection.onChange | Callback when the selected item changes'
             },
             propType: 'func',
             setter: [
@@ -981,7 +984,7 @@ const ProTableMeta = {
                 componentName: 'FunctionSetter',
                 props: {
                   template:
-                    'onChange(record,${extParams}){\n// 选择框的默认属性配置\nreturn { disabled: false };\n}'
+                    'onChange(record,${extParams}){\n//The default attribute configuration of the selection box\nreturn { disabled: false };\n}'
                 }
               },
               'VariableSetter'
@@ -996,7 +999,7 @@ const ProTableMeta = {
             name: 'rowSelection.onSelect',
             title: {
               label: 'onSelect',
-              tip: 'rowSelection.onSelect | 	用户手动选择/取消选择某行的回调'
+              tip: 'rowSelection.onSelect | 	Callback for user to manually select/deselect a row'
             },
             propType: 'func',
             setter: [
@@ -1004,7 +1007,7 @@ const ProTableMeta = {
                 componentName: 'FunctionSetter',
                 props: {
                   template:
-                    'onSelect(record,${extParams}){\n// 选择框的默认属性配置\nreturn { disabled: false };\n}'
+                    'onSelect(record,${extParams}){\n//The default attribute configuration of the selection box\nreturn { disabled: false };\n}'
                 }
               },
               'VariableSetter'
@@ -1019,7 +1022,7 @@ const ProTableMeta = {
             name: 'rowSelection.onSelectAll',
             title: {
               label: 'onSelectAll',
-              tip: 'rowSelection.onSelectAll | 	用户手动选择/取消选择所有行的回调'
+              tip: 'rowSelection.onSelectAll | 	Callback for user to manually select/deselect all rows'
             },
             propType: 'func',
             setter: [
@@ -1027,7 +1030,7 @@ const ProTableMeta = {
                 componentName: 'FunctionSetter',
                 props: {
                   template:
-                    'onSelectAll(record,${extParams}){\n// 选择框的默认属性配置\nreturn { disabled: false };\n}'
+                    'onSelectAll(record,${extParams}){\n//The default attribute configuration of the selection box\nreturn { disabled: false };\n}'
                 }
               },
               'VariableSetter'
@@ -1042,7 +1045,7 @@ const ProTableMeta = {
             name: 'rowSelection.onSelectInvert',
             title: {
               label: 'onSelectInvert',
-              tip: 'rowSelection.onSelectInvert | 用户手动选择反选的回调'
+              tip: 'rowSelection.onSelectInvert | The callback that the user manually selects the inverse selection'
             },
             propType: 'func',
             setter: [
@@ -1050,7 +1053,7 @@ const ProTableMeta = {
                 componentName: 'FunctionSetter',
                 props: {
                   template:
-                    'onSelectInvert(record,${extParams}){\n// 选择框的默认属性配置\nreturn { disabled: false };\n}'
+                    'onSelectInvert(record,${extParams}){\n//The default attribute configuration of the selection box\nreturn { disabled: false };\n}'
                 }
               },
               'VariableSetter'
@@ -1065,7 +1068,7 @@ const ProTableMeta = {
             name: 'rowSelection.onSelectNone',
             title: {
               label: 'onSelectNone',
-              tip: 'rowSelection.onSelectNone | 用户清空选择的回调'
+              tip: 'rowSelection.onSelectNone | Callback for the user to clear the selection'
             },
             propType: 'func',
             setter: [
@@ -1073,7 +1076,7 @@ const ProTableMeta = {
                 componentName: 'FunctionSetter',
                 props: {
                   template:
-                    'onSelectNone(record,${extParams}){\n// 选择框的默认属性配置\nreturn { disabled: false };\n}'
+                    'onSelectNone(record,${extParams}){\n//The default attribute configuration of the selection box\nreturn { disabled: false };\n}'
                 }
               },
               'VariableSetter'
@@ -1087,21 +1090,21 @@ const ProTableMeta = {
         ]
       },
       {
-        title: '行展开',
+        title: 'Line Expand',
         display: 'block',
         type: 'group',
         items: [
           {
             name: 'expandable.expandedRowRender',
             title: {
-              label: '展开行渲染',
-              tip: 'expandable.expandedRowRender | 额外的展开行'
+              label: 'expandedRowRender',
+              tip: 'expandable.expandedRowRender'
             },
             propType: 'func',
             setter: [
               {
                 componentName: 'SlotSetter',
-                title: '展开行插槽',
+                title: 'expand row slot',
                 initialValue: {
                   type: 'JSSlot',
                   params: ['record', 'index', 'indent', 'expanded'],
@@ -1112,7 +1115,7 @@ const ProTableMeta = {
                 componentName: 'FunctionSetter',
                 props: {
                   template:
-                    'expandedRowRender(record,index,indent,expanded,${extParams}){\n// 展开行渲染\nreturn `${record.id}`}'
+                    'expandedRowRender(record,index,indent,expanded,${extParams}){\n//Expanded row rendering\nreturn `${record.id}`}'
                 }
               },
               'VariableSetter'
@@ -1121,8 +1124,8 @@ const ProTableMeta = {
           {
             name: 'expandable.rowExpandable',
             title: {
-              label: '是否可展开',
-              tip: 'expandable.rowExpandable | 行是否可展开'
+              label: 'rowExpandable',
+              tip: 'expandable.rowExpandable | whether the row is expandable'
             },
             propType: 'func',
             setter: [
@@ -1130,7 +1133,7 @@ const ProTableMeta = {
                 componentName: 'FunctionSetter',
                 props: {
                   template:
-                    'rowExpandable(record,${extParams}){\n// 行是否可展开\nreturn true;\n}'
+                    'rowExpandable(record,${extParams}){\n//Whether the row can be expanded\nreturn true;\n}'
                 }
               },
               'VariableSetter'
@@ -1139,18 +1142,21 @@ const ProTableMeta = {
         ]
       },
       {
-        title: '扩展',
+        title: 'Toolbar',
         display: 'block',
         type: 'group',
         items: [
           {
             name: 'toolBarRender',
-            title: { label: '工具栏操作', tip: 'toolbar | 工具栏操作' },
+            title: {
+              label: 'toolBarRender',
+              tip: 'toolbar | toolbar operation'
+            },
             propType: 'func',
             setter: [
               {
                 componentName: 'SlotSetter',
-                title: '工具栏操作插槽',
+                title: 'toolbar action slot',
                 initialValue: {
                   type: 'JSSlot',
                   params: ['currentPageData'],
@@ -1161,7 +1167,7 @@ const ProTableMeta = {
                 componentName: 'FunctionSetter',
                 props: {
                   template:
-                    'renderToolBar(currentPageData,${extParams}){\n// 自定义渲染表格顶部\nreturn "表格顶部";\n}'
+                    'renderToolBar(currentPageData,${extParams}){\n//custom rendering table top\nreturn "table top";\n}'
                 }
               },
               'VariableSetter'
@@ -1169,12 +1175,12 @@ const ProTableMeta = {
           },
           {
             name: 'title',
-            title: { label: '表格标题', tip: 'title | 表格标题' },
+            title: { label: 'tableTitle', tip: 'title' },
             propType: 'func',
             setter: [
               {
                 componentName: 'SlotSetter',
-                title: '表格标题插槽',
+                title: 'table title slot',
                 initialValue: {
                   type: 'JSSlot',
                   params: ['currentPageData'],
@@ -1185,7 +1191,7 @@ const ProTableMeta = {
                 componentName: 'FunctionSetter',
                 props: {
                   template:
-                    'renderTitle(currentPageData,${extParams}){\n// 自定义渲染表格顶部\nreturn "表格顶部";\n}'
+                    'renderTitle(currentPageData,${extParams}){\n//custom rendering table top\nreturn "table top";\n}'
                 }
               },
               'VariableSetter'
@@ -1193,12 +1199,12 @@ const ProTableMeta = {
           },
           {
             name: 'footer',
-            title: { label: '表格尾部', tip: 'footer | 表格尾部' },
+            title: { label: 'footer', tip: 'footer' },
             propType: 'func',
             setter: [
               {
                 componentName: 'SlotSetter',
-                title: '表格尾部插槽',
+                title: 'table footer slot',
                 initialValue: {
                   type: 'JSSlot',
                   params: ['currentPageData'],
@@ -1209,7 +1215,7 @@ const ProTableMeta = {
                 componentName: 'FunctionSetter',
                 props: {
                   template:
-                    'renderFooter(currentPageData,${extParams}){\n// 自定义渲染表格尾部\nreturn "表格尾部";\n}'
+                    'renderFooter(currentPageData,${extParams}){\n//custom rendering table footer\nreturn "table footer";\n}'
                 }
               },
               'VariableSetter'
@@ -1217,14 +1223,17 @@ const ProTableMeta = {
           },
           {
             name: 'onHeaderRow',
-            title: { label: '头部行属性', tip: 'onHeaderRow | 设置头部行属性' },
+            title: {
+              label: 'onHeaderRow',
+              tip: 'onHeaderRow | Set header row properties'
+            },
             propType: 'func',
             setter: [
               {
                 componentName: 'FunctionSetter',
                 props: {
                   template:
-                    'onHeaderRow(columns,index,${extParams}){\n// 设置头部行属性\nreturn {onClick:()=>{}};\n}'
+                    'onHeaderRow(columns,index,${extParams}){\n//Set header row properties\nreturn {onClick:()=>{}};\n}'
                 }
               },
               'VariableSetter'
@@ -1232,14 +1241,14 @@ const ProTableMeta = {
           },
           {
             name: 'onRow',
-            title: { label: '行属性', tip: 'onRow | 设置行属性' },
+            title: { label: 'onRow', tip: 'onRow | Set row properties' },
             propType: 'func',
             setter: [
               {
                 componentName: 'FunctionSetter',
                 props: {
                   template:
-                    'onRow(record,index,${extParams}){\n// 设置行属性\nreturn {onClick:event=>{}};\n}'
+                    'onRow(record,index,${extParams}){\n//Set row properties\nreturn {onClick:event=>{}};\n}'
                 }
               },
               'VariableSetter'
@@ -1247,14 +1256,17 @@ const ProTableMeta = {
           },
           {
             name: 'rowClassName',
-            title: { label: '行类名', tip: 'rowClassName | 表格行的类名' },
+            title: {
+              label: 'row class name',
+              tip: 'rowClassName | The class name of the table row'
+            },
             propType: 'func',
             setter: [
               {
                 componentName: 'FunctionSetter',
                 props: {
                   template:
-                    'rowClassName(record,index,${extParams}){\n// 表格行的类名\nreturn `className-${record.type}`;\n}'
+                    'rowClassName(record,index,${extParams}){\n//The class name of the table row\nreturn `className-${record.type}`;\n}'
                 }
               },
               'VariableSetter'
@@ -1263,13 +1275,13 @@ const ProTableMeta = {
         ]
       },
       {
-        title: '搜索设置',
+        title: 'Search settings',
         display: 'block',
         type: 'group',
         items: [
           {
             name: 'search',
-            title: { label: '搜索', tip: 'search | 搜索' },
+            title: { label: 'search', tip: 'search' },
             propType: 'bool',
             setter: 'BoolSetter',
             defaultValue: true,
@@ -1290,7 +1302,7 @@ const ProTableMeta = {
                 'en-US': 'searchText',
                 'zh-CN': 'searchText'
               },
-              tip: 'searchText | 查询按钮的文本'
+              tip: 'searchText | The text of the search button'
             },
             name: 'search.searchText',
             setter: {
@@ -1310,7 +1322,7 @@ const ProTableMeta = {
                 'en-US': 'resetText',
                 'zh-CN': 'resetText'
               },
-              tip: 'resetText | 重置按钮的文本'
+              tip: 'resetText | The text of the reset button'
             },
             name: 'search.resetText',
             setter: {
@@ -1326,8 +1338,8 @@ const ProTableMeta = {
           {
             name: 'search.labelWidth',
             title: {
-              label: '标签宽度',
-              tip: 'labelWidth | 标签宽度'
+              label: 'labelWidth',
+              tip: 'labelWidth'
             },
             propType: 'number',
             setter: ['StringSetter', 'NumberSetter', 'VariableSetter'],
@@ -1339,8 +1351,8 @@ const ProTableMeta = {
           {
             name: 'search.span',
             title: {
-              label: '所占列数',
-              tip: 'span | 所占列数'
+              label: 'span',
+              tip: 'span | Number of columns'
             },
             propType: 'number',
             setter: 'NumberSetter',
@@ -1352,8 +1364,8 @@ const ProTableMeta = {
           {
             name: 'search.defaultCollapsed',
             title: {
-              label: '默认是否收起',
-              tip: 'defaultCollapsed | 默认是否收起'
+              label: 'defaultCollapsed',
+              tip: 'defaultCollapsed | Whether to close by default'
             },
             propType: 'bool',
             setter: 'BoolSetter',
@@ -1401,7 +1413,7 @@ const ProTableMeta = {
         ]
       },
       {
-        title: '高级',
+        title: 'Advanced',
         display: 'block',
         type: 'group',
         items: [
@@ -1412,11 +1424,11 @@ const ProTableMeta = {
                 'en-US': 'polling',
                 'zh-CN': '轮询请求'
               },
-              tip: '是否轮询 ProTable，它不会自动提交表单，如果你想自动提交表单的功能，需要在 onValueChange 中调用 formRef.current?.submit()'
+              tip: 'Whether to poll ProTable, it will not automatically submit the form, if you want to automatically submit the form function, you need to call formRef.current?.submit() in onValueChange'
             },
             name: 'polling',
             description:
-              '是否轮询 ProTable 它不会自动提交表单，如果你想自动提交表单的功能，需要在 onValueChange 中调用 formRef.current?.submit()',
+              'Whether to poll ProTable, it will not automatically submit the form, if you want to automatically submit the form function, you need to call formRef.current?.submit() in onValueChange',
             setter: {
               componentName: 'MixedSetter',
               props: {
@@ -1437,8 +1449,8 @@ const ProTableMeta = {
           {
             name: 'dateFormatter',
             title: {
-              label: '时间格式化',
-              tip: 'dateFormatter | number string 或自定义'
+              label: 'dateFormatter',
+              tip: 'dateFormatter | number string or custom'
             },
             propType: { type: 'oneOfType', value: ['string', 'func'] },
             setter: [
@@ -1447,11 +1459,11 @@ const ProTableMeta = {
                 props: {
                   options: [
                     {
-                      title: '数字类型',
+                      title: 'number',
                       value: 'number'
                     },
                     {
-                      title: '字符串类型',
+                      title: 'string',
                       value: 'string'
                     }
                   ]
@@ -1464,7 +1476,7 @@ const ProTableMeta = {
         ]
       },
       {
-        title: '国际化',
+        title: 'Language',
         display: 'block',
         type: 'group',
         items: [
@@ -1475,7 +1487,7 @@ const ProTableMeta = {
                 'en-US': 'language',
                 'zh-CN': '语言'
               },
-              tip: '支持中文和英文'
+              tip: 'Support Chinese and English'
             },
             name: 'intl',
             setter: {
@@ -1501,23 +1513,23 @@ const ProTableMeta = {
       events: [
         {
           name: 'onLoad',
-          description: '数据加载完成后触发'
+          description: 'Triggered after data loading is complete'
         },
         {
           name: 'beforeSearchSubmit',
-          description: '格式化搜索表单提交数据'
+          description: 'Format search form submission data'
         },
         {
           name: 'onSubmit',
-          description: '提交表单时触发'
+          description: 'Fired when the form is submitted'
         },
         {
           name: 'onReset',
-          description: '重置表单时触发'
+          description: 'Fired when the form is reset'
         },
         {
           name: 'onDataSourceChange',
-          description: '可编辑表格修改数据的改变'
+          description: 'Editable form to modify data changes'
         },
         {
           name: 'onExpand',
@@ -1534,11 +1546,12 @@ const ProTableMeta = {
         },
         {
           name: 'onLoadingChange',
-          description: 'loading 被修改时触发，一般是网络请求导致的'
+          description:
+            'loading, Triggered when modified, usually caused by a network request'
         },
         {
           name: 'onRequestError',
-          description: '数据加载失败时触发'
+          description: 'Triggered when data loading fails'
         }
       ],
       style: true,

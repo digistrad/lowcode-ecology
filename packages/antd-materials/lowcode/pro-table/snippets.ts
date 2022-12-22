@@ -3,55 +3,55 @@ import { Snippet } from '@alilc/lowcode-types'
 const getColumns = () => {
   return [
     {
-      title: '姓名',
+      title: 'Name',
       dataIndex: 'name',
       valueType: 'text'
     },
     {
-      title: '年龄',
+      title: 'Age',
       dataIndex: 'age',
       valueType: 'digit'
     },
     {
-      title: '头像',
+      title: 'Avatar',
       dataIndex: 'avatar',
       valueType: 'avatar'
     },
     {
-      title: '状态',
+      title: 'Status',
       dataIndex: 'status',
       renderTag: true,
       valueEnum: {
-        all: { text: '全部', status: 'Default' },
-        close: { text: '关闭', status: 'Default' },
-        running: { text: '运行中', status: 'Processing' },
-        online: { text: '已上线', status: 'Success' },
-        error: { text: '异常', status: 'Error' }
+        all: { text: 'All', status: 'Default' },
+        close: { text: 'Close', status: 'Default' },
+        running: { text: 'Running', status: 'Processing' },
+        online: { text: 'Online', status: 'Success' },
+        error: { text: 'Error', status: 'Error' }
       }
     },
     {
-      title: '贷款金额',
+      title: 'Loan Amount',
       dataIndex: 'loan',
       valueType: 'money'
     },
     {
-      title: '交易进度',
+      title: 'Transaction Progress',
       dataIndex: 'trade_progress',
       valueType: 'progress'
     },
     {
-      title: '个人简介',
+      title: 'Personal Profile',
       dataIndex: 'link',
       valueType: 'link',
       copyable: true
     },
     {
-      title: '地址',
+      title: 'Address',
       dataIndex: 'address',
       valueType: 'tag'
     },
     {
-      title: '创建时间',
+      title: 'Creation Time',
       dataIndex: 'create_time',
       valueType: 'dateTime'
     }
@@ -69,20 +69,20 @@ const getDataSource = () => {
       link: 'https://en.wikipedia.org/wiki/Xiao_Zhan',
       loan: 700000,
       trade_progress: 17,
-      address: '西湖区湖底公园1号',
+      address: 'No. 1 Lake Bottom Park, West Lake District',
       create_time: '2022-04-21 21:00',
       status: 'close'
     },
     {
       id: '2',
-      name: '王一博',
+      name: 'John Doe',
       age: 28,
       avatar:
         'https://upload.wikimedia.org/wikipedia/commons/9/9a/%E7%8E%8B%E4%B8%80%E5%8D%9A.jpg',
       link: 'https://en.wikipedia.org/wiki/Wang_Yibo',
       loan: 600000,
       trade_progress: 36,
-      address: '滨江区网商路699号',
+      address: 'No. 699 Wangshang Road, Binjiang District',
       create_time: '2022-04-21 22:00',
       status: 'running'
     }
@@ -91,7 +91,7 @@ const getDataSource = () => {
 
 export const snippets: Snippet[] = [
   {
-    title: 'CRUD 表格',
+    title: 'CRUD',
     screenshot:
       'https://alifd.alicdn.com/fusion-cool/icons/icon-antd/table-1.png',
     schema: {
@@ -102,7 +102,7 @@ export const snippets: Snippet[] = [
         columns: [
           ...getColumns(),
           {
-            title: '操作',
+            title: 'Operate',
             dataIndex: 'options',
             valueType: 'option',
             align: 'left',
@@ -115,7 +115,7 @@ export const snippets: Snippet[] = [
                   componentName: 'Button',
                   props: {
                     type: 'link',
-                    children: '编辑',
+                    children: 'Edit',
                     htmlType: 'button',
                     size: 'small',
                     shape: 'default',
@@ -129,16 +129,16 @@ export const snippets: Snippet[] = [
                 {
                   componentName: 'ProPopconfirm',
                   props: {
-                    title: '确定删除?',
+                    title: 'Confirm delete?',
                     okType: 'primary',
-                    okText: '确定',
-                    cancelText: '取消'
+                    okText: 'Confirm',
+                    cancelText: 'Cancel'
                   },
                   children: [
                     {
                       componentName: 'Button',
                       props: {
-                        children: '删除',
+                        children: 'Delete',
                         htmlType: 'button',
                         type: 'link',
                         size: 'small',
@@ -174,7 +174,7 @@ export const snippets: Snippet[] = [
               componentName: 'Button',
               props: {
                 type: 'primary',
-                children: '新增',
+                children: 'Add',
                 htmlType: 'button',
                 size: 'middle',
                 shape: 'default',
@@ -205,7 +205,7 @@ export const snippets: Snippet[] = [
     }
   },
   {
-    title: '查询表格',
+    title: 'Inquiry Form',
     screenshot:
       'https://alifd.alicdn.com/fusion-cool/icons/icon-antd/table-1.png',
     schema: {
@@ -229,7 +229,7 @@ export const snippets: Snippet[] = [
     }
   },
   {
-    title: '嵌套表格',
+    title: 'Nested Table',
     screenshot:
       'https://alifd.alicdn.com/fusion-cool/icons/icon-antd/table-1.png',
     schema: {
