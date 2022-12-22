@@ -1495,10 +1495,6 @@ const ProTableMeta = {
               props: {
                 options: [
                   {
-                    title: '简体中文',
-                    value: 'zhCNIntl'
-                  },
-                  {
                     title: 'enUS',
                     value: 'enUSIntl'
                   }

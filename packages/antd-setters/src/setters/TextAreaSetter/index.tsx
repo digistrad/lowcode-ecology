@@ -10,7 +10,7 @@ export interface ITextAreaSetterProps {
 
 const TextAreaSetter: React.FC<ITextAreaSetterProps> = ({
   onChange,
-  placeholder = '请输入',
+  placeholder = 'Please enter',
   value
 }) => {
   return (

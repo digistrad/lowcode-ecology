@@ -27,8 +27,8 @@ const SlotSetter: React.FC<ISlotSetterProps> = ({
   onChange,
   hideParams,
   onInitial,
-  checkedText = '启用',
-  unCheckedText = '关闭'
+  checkedText = 'enable',
+  unCheckedText = 'disable'
 }) => {
   const isOpenSlot = getIsOpenSlot(value)
 
@@ -69,8 +69,8 @@ const SlotSetter: React.FC<ISlotSetterProps> = ({
         <Input
           // size="small"
           className="lc-slot-params"
-          addonBefore="入参"
-          placeholder="插槽入参，以逗号分隔"
+          addonBefore="input"
+          placeholder="Slot input parameters, separated by commas"
           value={value.params.join(',')}
           onChange={(e) => {
             const val = e.target.value?.trim()
@@ -102,7 +102,6 @@ export default {
   component: SlotSetter,
   title: {
     type: 'i18n',
-    'zh-CN': '插槽输入',
     'en-US': 'Slot Setter'
   },
   condition: (field: any) => {

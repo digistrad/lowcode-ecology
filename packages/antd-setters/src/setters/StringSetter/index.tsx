@@ -10,7 +10,7 @@ export interface IStringSetterProps {
 
 const StringSetter: React.FC<IStringSetterProps> = ({
   onChange,
-  placeholder = '请输入',
+  placeholder = 'Please enter',
   value
 }) => {
   return (

@@ -1,6 +1,6 @@
 {
   "name": "@dslc/antd-materials",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -33,7 +33,7 @@
     "@types/react": "^18.0.14"
   },
   "componentConfig": {
-    "materialSchema": "https://unpkg.com/@dslc/antd-materials@1.0.11/build/lowcode/assets-prod.json"
+    "materialSchema": "https://unpkg.com/@dslc/antd-materials@1.0.12/build/lowcode/assets-prod.json"
   },
   "publishConfig": {
     "access": "public"

@@ -58,7 +58,7 @@ export const children = [
           {
             componentName: 'Input',
             props: {
-              placeholder: '请输入',
+              placeholder: 'Please enter',
               bordered: true,
               disabled: false,
               size: 'middle'
@@ -98,7 +98,7 @@ export const children = [
           {
             componentName: 'InputNumber',
             props: {
-              placeholder: '请输入',
+              placeholder: 'Please enter',
               autoFocus: false,
               disabled: false,
               controls: true,
@@ -143,7 +143,7 @@ export const children = [
               bordered: true,
               disabled: false,
               visibilityToggle: true,
-              placeholder: '请输入',
+              placeholder: 'Please enter',
               size: 'middle'
             }
           }
@@ -185,7 +185,7 @@ export const children = [
                 minRows: 3,
                 maxRows: 3
               },
-              placeholder: '请输入',
+              placeholder: 'Please enter',
               bordered: true,
               disabled: false,
               showCount: false,

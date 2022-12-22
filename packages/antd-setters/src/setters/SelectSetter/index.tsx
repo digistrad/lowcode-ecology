@@ -11,7 +11,7 @@ const SelectSetter: React.FC<SelectSetterProps> = ({
   mode,
   options,
   onChange,
-  placeholder = '请输入'
+  placeholder = 'Please enter'
 }) => {
   return (
     <Select

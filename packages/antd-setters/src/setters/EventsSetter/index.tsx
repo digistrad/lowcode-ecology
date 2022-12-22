@@ -95,7 +95,7 @@ const EventsSetter: React.FC<IEventsSetterProps> = ({
   const renderActionList = () => {
     if (!isArr(value) || !value.length) {
       return (
-        <Empty image={Empty.PRESENTED_IMAGE_SIMPLE} description="暂无数据" />
+        <Empty image={Empty.PRESENTED_IMAGE_SIMPLE} description="No data" />
       )
     }
     return (
@@ -116,7 +116,7 @@ const EventsSetter: React.FC<IEventsSetterProps> = ({
                         }
                       />
                       <Popconfirm
-                        title="确认删除吗?"
+                        title="Confirm delete?"
                         placement="topRight"
                         onConfirm={(e) => {
                           e.stopPropagation()
@@ -197,17 +197,17 @@ const EventsSetter: React.FC<IEventsSetterProps> = ({
       <Modal
         visible={visible}
         maskClosable={false}
-        title="事件配置"
+        title="Event configuration"
         onCancel={hideModal}
         onOk={handleOk}
         className="events-setter-modal"
         width={1060}
         okButtonProps={{ disabled: !selectedEvent || !selectedAction }}
-        okText="确定"
-        cancelText="取消"
+        okText="Confirm"
+        cancelText="Cancel"
       >
         <div className="events-setter__left">
-          <Header title="1.触发事件" />
+          <Header title="1. Trigger event" />
           {events.length ? (
             <ul className="list">
               {events.map((item) => {
@@ -226,12 +226,12 @@ const EventsSetter: React.FC<IEventsSetterProps> = ({
           ) : (
             <Empty
               image={Empty.PRESENTED_IMAGE_SIMPLE}
-              description="暂无可配置事件"
+              description="There are currently no configurable events"
             />
           )}
         </div>
         <div className="events-setter__middle">
-          <Header title="2.执行动作" />
+          <Header title="2. Perform action" />
           {/* 选中了触发事件才显示动作列表 */}
           {selectedEvent ? (
             <div className="list-container">
@@ -275,16 +275,20 @@ const EventsSetter: React.FC<IEventsSetterProps> = ({
           ) : (
             <Empty
               image={Empty.PRESENTED_IMAGE_SIMPLE}
-              description="请选择触发事件"
+              description="Please select a trigger event"
             />
           )}
         </div>
         <div className="events-setter__right">
-          <Header title="3.参数/代码配置" />
+          <Header title="3. Parameter/code configuration" />
           {!selectedAction?.params ? (
             <Empty
               image={Empty.PRESENTED_IMAGE_SIMPLE}
-              description={!selectedAction ? '请选择执行动作' : '暂无配置项'}
+              description={
+                !selectedAction
+                  ? 'Please select action'
+                  : 'No configuration items'
+              }
             />
           ) : (
             <div className="config-container">

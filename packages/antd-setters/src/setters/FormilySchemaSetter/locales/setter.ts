@@ -20,12 +20,12 @@ export default {
         drawer: '配置规则',
         triggerType: {
           title: '触发类型',
-          placeholder: '请选择',
+          placeholder: 'Please choose',
           dataSource: ['输入时', '聚焦时', '失焦时']
         },
         format: {
           title: '格式校验',
-          placeholder: '请选择',
+          placeholder: 'Please choose',
           dataSource: ValidatorFormats
         },
         validator: {
@@ -66,7 +66,7 @@ export default {
         relationsFields: '依赖字段',
         variableName: '变量名',
         variableNameValidateMessage: '不符合变量命名规则',
-        pleaseInput: '请输入',
+        pleaseInput: 'Please enter',
         sourceField: '来源字段',
         sourceProperty: '字段属性',
         variableType: '变量类型',
@@ -88,11 +88,11 @@ export default {
         componentProps: '组件属性',
         decorator: '容器',
         decoratorProps: '容器属性',
-        pleaseSelect: '请选择',
+        pleaseSelect: 'Please choose',
         expressionValueTypeIs: '表达式值类型为'
       },
       ValidatorSetter: {
-        pleaseSelect: '请选择',
+        pleaseSelect: 'Please choose',
         formats: ValidatorFormats
       }
     }
