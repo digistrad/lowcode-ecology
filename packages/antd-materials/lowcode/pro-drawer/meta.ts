@@ -8,8 +8,8 @@ export default {
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
-  group: '高级组件',
-  category: '弹窗类',
+  group: 'Advanced',
+  category: 'Pop-up',
   npm: {
     package: '@dslc/antd-materials',
     version: 'latest',

@@ -3,9 +3,9 @@ import snippets from './snippets'
 export default {
   snippets,
   componentName: 'ProPopconfirm',
-  title: '高级气泡确认框',
-  group: '高级组件',
-  category: '弹窗类',
+  title: 'PopupConfirm',
+  group: 'Advanced',
+  category: 'Pop-up',
   props: [
     {
       name: 'title',

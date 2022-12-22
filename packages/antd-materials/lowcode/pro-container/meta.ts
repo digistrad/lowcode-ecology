@@ -7,8 +7,8 @@ const ProContainerMeta: ComponentMetadata = {
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
-  group: '高级组件',
-  category: '布局类',
+  group: 'Advanced',
+  category: 'Layout',
   npm: {
     package: '@dslc/antd-materials',
     version: 'latest',
