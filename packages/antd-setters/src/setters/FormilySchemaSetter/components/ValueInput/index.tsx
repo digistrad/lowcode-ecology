@@ -68,7 +68,7 @@ export const ValueInput = createPolyInput([
           }
           trigger="click"
         >
-          <Button block>表达式</Button>
+          <Button block>Expression</Button>
         </Popover>
       )
     },

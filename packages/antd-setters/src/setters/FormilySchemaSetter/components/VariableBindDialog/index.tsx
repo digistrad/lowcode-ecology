@@ -19,10 +19,10 @@ const parseExpression = (value) => {
   return matched?.[1] || value || ''
 }
 
-const HelpText = `你可以通过点击左侧区域绑定变量或处理函数，当然你也可以在上方输入复杂的表达式。
-输入框内默认支持变量，写法和 JS 写法完全一致。<br>
-$this: '页面实例'<br>
-$self: '当前 Formily 组件的 Field 实例'<br>
+const HelpText = `You can bind variables or processing functions by clicking the area on the left, and of course you can also enter complex expressions above.
+Variables are supported by default in the input box, and the writing method is exactly the same as the JS writing method. <br>
+$this: 'page instance'<br>
+$self: 'Field instance of the current Formily component'<br>
 `
 
 const defaultEditorProps = {
@@ -74,14 +74,14 @@ const VariableBind = () => {
 
   const setCacheValue = (value) => {
     if (!isExpression(value)) {
-      console.log('设置了缓存值', value)
+      console.log('cached value is set', value)
       cacheValueRef.current = value
     }
   }
 
   const clearCacheValue = () => {
     cacheValueRef.current = null
-    console.log('清空缓存值')
+    console.log('clear cache value')
   }
 
   const open = () => {
@@ -162,15 +162,15 @@ const VariableBind = () => {
 
       setOptions({
         vars: {
-          name: 'State属性',
+          name: 'State property',
           childrens: vars
         },
         methods: {
-          name: '自定义处理函数',
+          name: 'custom handler',
           childrens: methods
         },
         dataSource: {
-          name: '数据源',
+          name: 'data source',
           childrens: dataSource
         }
       })
@@ -250,17 +250,17 @@ const VariableBind = () => {
         <div className="bottom-left-container">
           {code && code.length > 0 && (
             <Button danger onClick={removeBinding}>
-              移除绑定
+              Remove binding
             </Button>
           )}
         </div>
 
         <div className="bottom-right-container">
           <Button type="primary" onClick={onOk}>
-            确定
+            Confirm
           </Button>
           &nbsp;&nbsp;
-          <Button onClick={close}>取消</Button>
+          <Button onClick={close}>Cancel</Button>
         </div>
       </div>
     )
@@ -278,7 +278,7 @@ const VariableBind = () => {
       >
         <div className="variable-dialog-body">
           <div className="dialog-left-container">
-            <div className="dialog-small-title">变量列表</div>
+            <div className="dialog-small-title">variable list</div>
 
             <div className="vs-variable-selector-inner">
               <ul className="vs-variable-selector-category vs-variable-selector-ul">
@@ -297,8 +297,8 @@ const VariableBind = () => {
               <div className="vs-variable-selector-items-container">
                 <div className="ve-search-control">
                   <Input.Search
-                    placeholder="搜索"
-                    aria-label="搜索"
+                    placeholder="Search"
+                    aria-label="search"
                     style={{ width: '100%' }}
                     value={searchValue}
                     onChange={(e) => setSearchValue(e.currentTarget.value)}

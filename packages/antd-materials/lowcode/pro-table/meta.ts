@@ -37,7 +37,7 @@ const ProTableMeta = {
         items: [
           {
             name: 'dataSource',
-            title: { label: '表格数据', tip: 'dataSource | 表格数据' },
+            title: { label: 'dataSource', tip: 'dataSource | form data' },
             propType: 'object',
             setter: 'JsonSetter'
           },
@@ -1308,7 +1308,7 @@ const ProTableMeta = {
             setter: {
               componentName: 'StringSetter',
               isRequired: false,
-              initialValue: ''
+              initialValue: 'Search'
             },
             condition: {
               type: 'JSFunction',
@@ -1328,7 +1328,7 @@ const ProTableMeta = {
             setter: {
               componentName: 'StringSetter',
               isRequired: false,
-              initialValue: ''
+              initialValue: 'Reset'
             },
             condition: {
               type: 'JSFunction',
@@ -1500,7 +1500,8 @@ const ProTableMeta = {
                   }
                 ]
               }
-            }
+            },
+            defaultValue: 'enUSIntl'
           }
         ]
       }
