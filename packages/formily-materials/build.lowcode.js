@@ -1,6 +1,7 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const { name, version } = require('./package.json');
 
-const library = 'SeadaFormilyMaterials';
+const library = 'DslcFormilyMaterials';
 
 module.exports = {
   alias: {

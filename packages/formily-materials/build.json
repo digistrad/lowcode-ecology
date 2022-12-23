@@ -1,5 +1,5 @@
 {
-  "library": "SeadaFormilyMaterials",
+  "library": "DslcFormilyMaterials",
   "libraryTarget": "umd",
   "sourceMap": true,
   "alias": {

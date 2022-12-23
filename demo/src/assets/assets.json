@@ -78,7 +78,7 @@
     {
       "package": "@dslc/formily-materials",
       "version": "0.1.1",
-      "library": "SeadaFormilyMaterials",
+      "library": "DslcFormilyMaterials",
       "urls": [
         "https://unpkg.com/@dslc/formily-materials@1.0.0-rc.15/build/lowcode/view.js",
         "https://unpkg.com/@dslc/formily-materials@1.0.0-rc.15/build/lowcode/view.css"
@@ -111,7 +111,7 @@
   ],
   "components": [
     {
-      "exportName": "SeadaFormilyMaterialsMeta",
+      "exportName": "DslcFormilyMaterialsMeta",
       "npm": {
         "package": "@dslc/formily-materials",
         "version": "0.1.1"

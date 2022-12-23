@@ -1,67 +1,36 @@
-0 silly argv {
-0 silly argv   _: [ 'version' ],
-0 silly argv   lernaVersion: '3.22.1',
-0 silly argv   '$0': '/opt/homebrew/bin/lerna',
-0 silly argv   bump: 'patch'
-0 silly argv }
-1 notice cli v3.22.1
-2 verbose rootPath /Users/alperderici/Documents/commercial_code/digistrad/lowcode/digistrad/lowcode-ecology
-3 info current version 1.0.6
-4 silly isAnythingCommitted
-5 verbose isAnythingCommitted 1
-6 silly currentBranch
-7 verbose currentBranch main
-8 silly remoteBranchExists
-9 silly isBehindUpstream
-10 silly isBehindUpstream main is behind origin/main by 0 commit(s) and ahead by 0
-11 silly hasTags
-12 verbose hasTags true
-13 silly git-describe.sync "v1.0.0-rc.23-2-g2f54985-dirty" => {"lastTagName":"v1.0.0-rc.23","lastVersion":"v1.0.0-rc.23","refCount":"2","sha":"2f54985","isDirty":true}
-14 warn force-publish all packages
-15 info Assuming all packages changed
-16 verbose updated @dslc/antd-materials
-17 verbose updated @dslc/antd-plugins
-18 verbose updated @dslc/antd-setters
-19 verbose updated @dslc/formily-materials
-20 info execute Skipping releases
-21 silly lifecycle "preversion" starting in "lowcode-plugins"
-22 info lifecycle lowcode-plugins@1.0.0~preversion: lowcode-plugins@1.0.0
-23 verbose lifecycle lowcode-plugins@1.0.0~preversion: unsafe-perm in lifecycle true
-24 verbose lifecycle lowcode-plugins@1.0.0~preversion: PATH: /Users/alperderici/Documents/commercial_code/digistrad/lowcode/digistrad/lowcode-ecology/node_modules/npm-lifecycle/node-gyp-bin:/Users/alperderici/Documents/commercial_code/digistrad/lowcode/digistrad/lowcode-ecology/node_modules/.bin:/Users/alperderici/.nvm/versions/node/v14.21.1/bin:/Users/alperderici/.nvm/versions/node/v16.18.1/bin:/Users/alperderici/.nvm/versions/node/v19.2.0/bin:/opt/homebrew/opt/opencv@2/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/alperderici/.nvm/versions/node/v19.2.0/bin:/opt/homebrew/opt/opencv@2/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/homebrew/bin:/opt/homebrew/sbin
-25 verbose lifecycle lowcode-plugins@1.0.0~preversion: CWD: /Users/alperderici/Documents/commercial_code/digistrad/lowcode/digistrad/lowcode-ecology
-26 silly lifecycle lowcode-plugins@1.0.0~preversion: Args: [
-26 silly lifecycle   '-c',
-26 silly lifecycle   'yarn install && git add -A && yarn run build && yarn run build:materials && yarn run build:formily'
-26 silly lifecycle ]
-27 silly lifecycle lowcode-plugins@1.0.0~preversion: Returned: code: 0  signal: null
-28 silly lifecycle "preversion" finished in "lowcode-plugins"
-29 silly lifecycle No script for "preversion" in "@dslc/antd-materials", continuing
-30 silly lifecycle No script for "preversion" in "@dslc/antd-setters", continuing
-31 silly lifecycle No script for "preversion" in "@dslc/formily-materials", continuing
-32 silly lifecycle No script for "version" in "@dslc/antd-setters", continuing
-33 silly lifecycle No script for "preversion" in "@dslc/antd-plugins", continuing
-34 silly lifecycle No script for "version" in "@dslc/antd-materials", continuing
-35 silly lifecycle No script for "version" in "@dslc/formily-materials", continuing
-36 silly lifecycle No script for "version" in "@dslc/antd-plugins", continuing
-37 silly lifecycle No script for "version" in "lowcode-plugins", continuing
-38 silly gitAdd [
-38 silly gitAdd   'packages/antd-setters/package.json',
-38 silly gitAdd   'packages/antd-setters/package-lock.json',
-38 silly gitAdd   'packages/antd-materials/package.json',
-38 silly gitAdd   'packages/antd-materials/package-lock.json',
-38 silly gitAdd   'packages/formily-materials/package.json',
-38 silly gitAdd   'packages/formily-materials/package-lock.json',
-38 silly gitAdd   'packages/antd-plugins/package.json',
-38 silly gitAdd   'packages/antd-plugins/package-lock.json',
-38 silly gitAdd   'lerna.json'
-38 silly gitAdd ]
-39 error Error: Command failed: git add -- packages/antd-setters/package.json packages/antd-setters/package-lock.json packages/antd-materials/package.json packages/antd-materials/package-lock.json packages/formily-materials/package.json packages/formily-materials/package-lock.json packages/antd-plugins/package.json packages/antd-plugins/package-lock.json lerna.json
-39 error The following paths are ignored by one of your .gitignore files:
-39 error packages/antd-materials/package-lock.json
-39 error packages/antd-plugins/package-lock.json
-39 error packages/antd-setters/package-lock.json
-39 error packages/formily-materials/package-lock.json
-39 error
-39 error     at makeError (/Users/alperderici/Documents/commercial_code/digistrad/lowcode/digistrad/lowcode-ecology/node_modules/execa/index.js:174:9)
-39 error     at /Users/alperderici/Documents/commercial_code/digistrad/lowcode/digistrad/lowcode-ecology/node_modules/execa/index.js:278:16
-39 error     at processTicksAndRejections (internal/process/task_queues.js:95:5)
+46 error Error: Command failed: git commit -m chore(versions): 😊 publish v1.0.16
+46 error [STARTED] Preparing lint-staged...
+46 error [SUCCESS] Preparing lint-staged...
+46 error [STARTED] Running tasks for staged files...
+46 error [STARTED] package.json — 15 files
+46 error [STARTED] *.{js,jsx,ts,tsx} — 1 file
+46 error [STARTED] *.{md,json,less} — 13 files
+46 error [STARTED] prettier --write .
+46 error [STARTED] prettier --write
+46 error [SUCCESS] prettier --write
+46 error [SUCCESS] *.{md,json,less} — 13 files
+46 error [SUCCESS] prettier --write .
+46 error [STARTED] eslint  --fix
+46 error [FAILED] eslint  --fix [FAILED]
+46 error [FAILED] eslint  --fix [FAILED]
+46 error [SUCCESS] Running tasks for staged files...
+46 error [STARTED] Applying modifications from tasks...
+46 error [SKIPPED] Skipped because of errors from tasks.
+46 error [STARTED] Reverting to original state because of errors...
+46 error [SUCCESS] Reverting to original state because of errors...
+46 error [STARTED] Cleaning up temporary files...
+46 error [SUCCESS] Cleaning up temporary files...
+46 error
+46 error ✖ eslint  --fix:
+46 error Warning: React version not specified in eslint-plugin-react settings. See https://github.com/jsx-eslint/eslint-plugin-react#configuration .
+46 error
+46 error /Users/alperderici/Documents/commercial_code/digistrad/lowcode/digistrad/lowcode-ecology/packages/formily-materials/build.lowcode.js
+46 error   1:27  error  Require statement not part of import statement  @typescript-eslint/no-var-requires
+46 error
+46 error ✖ 1 problem (1 error, 0 warnings)
+46 error
+46 error husky - pre-commit hook exited with code 1 (error)
+46 error
+46 error     at makeError (/Users/alperderici/Documents/commercial_code/digistrad/lowcode/digistrad/lowcode-ecology/node_modules/execa/index.js:174:9)
+46 error     at /Users/alperderici/Documents/commercial_code/digistrad/lowcode/digistrad/lowcode-ecology/node_modules/execa/index.js:278:16
+46 error     at processTicksAndRejections (internal/process/task_queues.js:95:5)
