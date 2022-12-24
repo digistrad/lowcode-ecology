@@ -6,7 +6,7 @@ const FormilyComponentMeta = {
   componentName: 'FormilyObjectContainer',
   title: 'Object',
   group: 'Formily',
-  category: '布局组件',
+  category: 'Layout',
   npm: {
     package: '@dslc/formily-materials',
     version: 'latest',

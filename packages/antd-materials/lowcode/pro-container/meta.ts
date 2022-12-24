@@ -68,10 +68,10 @@ const ProContainerMeta: ComponentMetadata = {
             'en-US': 'loading',
             'zh-CN': '只加载内容区域'
           },
-          tip: 'loading | 只加载内容区域'
+          tip: 'loading | Only load the content area'
         },
         name: 'loading',
-        description: '只加载内容区域',
+        description: 'Only load the content area',
         setter: {
           componentName: 'MixedSetter',
           props: {
@@ -122,7 +122,7 @@ const ProContainerMeta: ComponentMetadata = {
           tip: 'header | 头部'
         },
         name: 'header',
-        description: '头部',
+        description: 'header',
         setter: {
           componentName: 'ObjectSetter',
           props: {

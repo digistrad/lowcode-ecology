@@ -9,8 +9,8 @@ export const snippets: Snippet[] = [
       props: {
         fixedHeader: true,
         header: {
-          title: '页面标题',
-          subTitle: '子标题',
+          title: 'Page Title',
+          subTitle: 'Subtitle',
           extra: [
             {
               type: 'JSSlot',
@@ -19,7 +19,7 @@ export const snippets: Snippet[] = [
                   componentName: 'Button',
                   props: {
                     type: 'default',
-                    children: '次要按钮',
+                    children: 'Secondary Button',
                     __component_name: 'Button',
                     htmlType: 'button',
                     size: 'middle',
@@ -39,7 +39,7 @@ export const snippets: Snippet[] = [
                   componentName: 'Button',
                   props: {
                     type: 'default',
-                    children: '次要按钮',
+                    children: 'Secondary Button',
                     __component_name: 'Button',
                     htmlType: 'button',
                     size: 'middle',
@@ -59,7 +59,7 @@ export const snippets: Snippet[] = [
                   componentName: 'Button',
                   props: {
                     type: 'primary',
-                    children: '主要按钮',
+                    children: 'Primary Button',
                     __component_name: 'Button',
                     htmlType: 'button',
                     size: 'middle',
@@ -77,15 +77,15 @@ export const snippets: Snippet[] = [
             routes: [
               {
                 path: '',
-                breadcrumbName: '一级页面'
+                breadcrumbName: 'first page'
               },
               {
                 path: '',
-                breadcrumbName: '二级页面'
+                breadcrumbName: 'second page'
               },
               {
                 path: '',
-                breadcrumbName: '当前页面'
+                breadcrumbName: 'current page'
               }
             ]
           }
@@ -96,16 +96,16 @@ export const snippets: Snippet[] = [
         },
         tabList: [
           {
-            tab: '基本信息',
+            tab: 'Basic Information',
             key: 'base',
             closable: false
           },
           {
-            tab: '详细信息',
+            tab: 'Details',
             key: 'info'
           },
           {
-            tab: '禁用',
+            tab: 'Disabled',
             key: '3',
             disabled: true
           }

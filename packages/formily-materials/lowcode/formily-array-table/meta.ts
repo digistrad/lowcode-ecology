@@ -6,7 +6,7 @@ const FormilyComponentMeta = {
   componentName: 'FormilyArrayTable',
   title: 'ArrayTable',
   group: 'Formily',
-  category: '自增组件',
+  category: 'Array',
   npm: {
     package: '@dslc/formily-materials',
     version: 'latest',

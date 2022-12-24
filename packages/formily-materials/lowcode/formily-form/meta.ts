@@ -7,7 +7,7 @@ const FormilyFormMeta = {
   componentName: 'FormilyForm',
   title: 'FormilyForm',
   group: 'Formily',
-  category: '布局组件',
+  category: 'Layout',
   npm: {
     package: '@dslc/formily-materials',
     version: 'latest',

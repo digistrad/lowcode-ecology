@@ -110,7 +110,7 @@ class ProTable extends Component<IProTableProps, any> {
     }
 
     return (
-      <ConfigProvider locale={intlMap[intl || 'zhCNIntl']}>
+      <ConfigProvider locale={intlMap[intl || 'enUSIntl']}>
         <OriginalProTable
           {...this.props}
           search={

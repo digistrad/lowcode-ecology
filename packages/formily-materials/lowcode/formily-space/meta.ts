@@ -6,7 +6,7 @@ const FormilyComponentMeta = {
   componentName: 'FormilySpace',
   title: 'Space',
   group: 'Formily',
-  category: '布局组件',
+  category: 'Layout',
   npm: {
     package: '@dslc/formily-materials',
     version: 'latest',

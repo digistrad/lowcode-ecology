@@ -6,7 +6,7 @@ const FormilyComponentMeta = {
   componentName: 'FormilyNumberPicker',
   title: 'NumberPicker',
   group: 'Formily',
-  category: '输入组件',
+  category: 'Input',
   npm: {
     package: '@dslc/formily-materials',
     version: 'latest',

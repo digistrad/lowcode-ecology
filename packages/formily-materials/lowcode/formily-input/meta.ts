@@ -6,7 +6,7 @@ const FormilyInputMeta = {
   componentName: 'FormilyInput',
   title: 'Input',
   group: 'Formily',
-  category: '输入组件',
+  category: 'Input',
   npm: {
     package: '@dslc/formily-materials',
     version: 'latest',
